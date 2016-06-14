@@ -1,0 +1,360 @@
+.sl-ui-select {
+  @radius: .4rem;
+  @radius-inside: .3rem;
+
+  border-radius: @radius;
+  display: inline-block;
+  background-color: @ui-select-bg-color;
+  position: relative;
+  cursor: pointer;
+  height: 4.3rem;
+  font-size: @ui-font-size-base;
+  z-index: 2;
+
+  &:hover {
+    background-color: @ui-select-hover-bg-color;
+  }
+
+  span.selected {
+    display: block;
+    position: relative;
+    color: @ui-select-color;
+    padding: 1rem 4.5rem 1rem 1.5rem;
+    //min-width: 14rem;
+    position: relative;
+    z-index: 2;
+    border-radius: @radius;
+    background-color: inherit;
+
+    .sl-icon {
+      font-size: .85rem;
+      color: @ui-select-color;
+      position: absolute;
+      top: 1.55rem;
+      right: 1.5rem;
+    }
+  }
+
+  &.open {
+    background-color: @ui-select-nav-bg-color;
+    border-radius: @radius @radius 0 0;
+
+    span.selected, span.selected .sl-icon {
+      color: @ui-link-color;
+    }
+
+    span.selected {
+      .drop-shadow(0, 1px, 3px, 0, 0.35);
+
+      //hide bottom dropshadow on box
+      &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 100%;
+        background: @ui-select-nav-bg-color;
+        height: 7px;
+        bottom: -4px;
+        left: 0;
+      }
+    }
+  }
+
+  .selected {
+    display: block;
+
+    .sl-icon {
+      color: @ui-icon-selected;
+    }
+
+    &:hover {
+      color: @ui-select-hover-color;
+
+      .sl-icon {
+        color: @ui-icon-selected-hover;
+      }
+    }
+  }
+
+  ul {
+    cursor: default;
+    display: block;
+    position: absolute;
+    top: 4.3rem;
+    width: 26rem;
+    padding: 1rem 0;
+    left: 0;
+    background-color: @ui-select-nav-bg-color;
+    border-radius: 0 @radius @radius @radius;
+    .drop-shadow(0, 1px, 3px, 0, 0.35);
+
+    li {
+      display: block;
+      padding: 0 1rem;
+    }
+
+    a {
+      display: block;
+      padding: .5rem 2rem .5rem 1em;
+      text-decoration: none;
+      border-radius: @radius-inside;
+      color: @ui-gray-light;
+      position: relative;
+
+      &:hover {
+        background-color: @ui-select-bg-color;
+        color: @ui-select-color;
+      }
+
+      .sl-icon {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+      }
+    }
+  }
+
+  //more menu
+  &.more {
+    background-color: @ui-select-more-bg-color;
+    color: @ui-select-more-color;
+
+    ul {
+      top: 30px;
+      width: 17rem;
+
+      a:hover {
+        background-color: @ui-select-more-hover-bg-color;
+      }
+    }
+
+    span.selected {
+      color: @ui-select-more-selected-color;
+      padding: .5rem 4.5rem .5rem 1rem;
+      .drop-shadow(0, 1px, 4px, 0, 0.35);
+
+      &.selected-item {
+        background-color: @ui-select-more-selected-bg-color;
+        color: @ui-select-more-selected-item-color;
+
+        .sl-icon {
+          color: @ui-select-more-selected-item-color;
+        }
+      }
+
+      .sl-icon {
+        color: @ui-select-more-selected-color;
+        top: 1rem;
+      }
+    }
+
+    &.open {
+      span.selected {
+
+        &.selected-item {
+          .sl-icon {
+            color: @ui-select-more-selected-item-color;
+          }
+
+          &:after {
+            left: -1px;
+            width: 101%;
+            background-color: @ui-select-more-selected-bg-color;
+          }
+        }
+      }
+    }
+  }
+
+  .beta {
+    font-size: 11px;
+  }
+
+}
+
+.ui-select-scroll {
+  position: absolute;
+  max-height: 10rem;
+  overflow-y: auto;
+  width: 20rem;
+  border: 1px solid black;
+  background: white;
+  padding: .5rem 1rem;
+  margin-left: 1rem;
+
+  li {
+    padding: .5rem 1rem;
+    cursor: pointer;
+
+    &.active {
+      border: 1px solid blue;
+      border-radius: @ui-radius;
+    }
+
+    span:nth-child(1) {
+      width: 10rem;
+    }
+    span:nth-child(2){
+      width: auto;
+    }
+  }
+}
+
+.ui-list-scroll {
+  width: 8rem;
+  max-height: 4rem; //not sure why sean had commented this out
+  overflow-y: auto;
+  margin-bottom: 0;
+  padding-left: 1rem;
+}
+
+.ui-menu-action {
+  position: relative;
+  display: inline-block;
+
+  .actions {
+    background-color: @ui-menu-action-bg-color;
+    position: absolute;
+    z-index: 2;
+    top: 1.6rem;
+    min-width: 8rem;
+    .ui-popover-box-shadow;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li > * {
+      padding: .3rem .8rem;
+      display: block;
+      white-space: nowrap;
+    }
+  }
+}
+
+.ui-menu-container {
+  max-width: 40rem;
+  font-size: 1.4rem;
+  color: @ui-dropdown-menu-color;
+  margin: 0 !important;
+  position: relative;
+  padding: 0 !important;
+
+  .toggler {
+
+    &.ui-input {
+      width: 100% !important;
+      padding-right: 3.5rem;
+    }
+
+    margin: 0 !important;
+  }
+
+  .ui-input-search {
+    position: relative;
+
+    .clear {
+      display: block;
+      position: absolute;
+      top: -.3rem;
+      right: .6rem;
+      left: auto;
+      text-decoration: none;
+      cursor: default;
+
+      .ui-icon {
+        display: none;
+        width: 2rem;
+        height: 2rem;
+      }
+
+      &.focused {
+        cursor: pointer;
+        .ui-icon {
+          display: inline-block;
+        }
+      }
+    }
+
+    .ui-icon[name=carot] {
+      position: absolute;
+      right: -3.5rem;
+      height: 2.25rem;
+      top: -.5rem;
+      transform: rotate(90deg);
+
+      &:hover {
+        path {
+          fill: @blue-1;
+        }
+      }
+    }
+  }
+}
+
+.ui-menu-dropdown {
+  @radius: .4rem;
+  @radius-inside: .3rem;
+
+  cursor: default;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  padding: 0;
+  z-index: 11;
+  background-color: @ui-dropdown-menu-background-color;
+  border-radius: 0 @radius @radius @radius;
+  border: 1px solid @ui-dropdown-menu-border-color;
+
+  .drop-shadow(0, 1px, 3px, 0, 0.35);
+
+  header {
+    padding: 1rem;
+    border-bottom: 1px solid @ui-dropdown-menu-border-color;
+  }
+
+  footer {
+    padding: 1rem;
+    border-top: 1px solid @ui-dropdown-menu-border-color;
+  }
+
+  section.menu {
+    ul {
+      padding: 1rem 0 0;
+    }
+
+    li {
+      display: block;
+      padding: 0 1rem;
+      margin-bottom: 1rem !important;
+
+      &.selected {
+        a {
+          background-color: @ui-dropdown-menu-selected-bg-color;
+          color: @ui-dropdown-menu-link-hover-color;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      padding: .5rem 1em;
+      text-decoration: none;
+      border-radius: @radius-inside;
+      color: @ui-gray-light;
+
+      &:hover {
+        background-color: @ui-dropdown-menu-bg-color;
+        color: @ui-dropdown-menu-link-hover-color;
+      }
+
+      &:active {
+        background-color: @ui-dropdown-menu-link-active-bg-color;
+      }
+    }
+  }
+}

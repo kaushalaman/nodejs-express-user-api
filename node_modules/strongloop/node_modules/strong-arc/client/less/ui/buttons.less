@@ -1,0 +1,369 @@
+.ui-toggler {
+  button {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: @ui-toggler-inactive-color;
+    background: @ui-toggler-inactive-bg-color;
+    border: 1px solid @ui-toggler-border-color;
+    padding: .65rem 1.75rem;
+    min-width: 10.5rem;
+    text-align: center;
+    border-radius: 0;
+    border-right: none;
+    border-left: none;
+
+    &:first-child {
+      border-radius: @ui-radius 0 0 @ui-radius;
+      border-left: 1px solid @ui-toggler-border-color;
+      border-right: none;
+    }
+
+    &:last-child {
+      border-radius: 0 @ui-radius @ui-radius 0;
+      border-left: none;
+      border-right: 1px solid @ui-toggler-border-color;
+    }
+
+    &.active {
+      color: @ui-toggler-color;
+      background: @ui-toggler-bg-color;
+      box-shadow: inset 0 0 0 .2rem @ui-toggler-active-border-color;
+    }
+  }
+
+  &.small {
+    display: inline-block;
+
+    button {
+      font-size: 1.2rem;
+      padding: .5rem 1rem;
+      width: 6rem;
+      border-color: @ui-toggler-small-border-color;
+
+      &.active {
+        background: @ui-toggler-small-bg-color;
+      }
+    }
+  }
+}
+
+.ui-switch {
+  background: transparent;
+  border: none;
+  overflow: visible;
+
+  //power switch
+  &.power {
+    &.ui-switch-left {
+      .ui-switch-toggle {
+        border-color: @ui-switch-power-border-color;
+
+        .ui-switch-circle {
+          background: @ui-switch-power-bg-color;
+        }
+      }
+    }
+  }
+
+  //select switch is default
+
+  .ui-switch-toggle {
+    display: inline-block;
+    position: relative;
+    font-size: 1.4rem;
+    color: @ui-switch-color;
+    background: @ui-switch-wrap-bg-color;
+    border-radius: @ui-radius;
+    border: 1px solid @ui-switch-border-color;
+    width: 5.6rem;
+    height: 3rem;
+    margin: 0 .75rem;
+    overflow: hidden;
+    transition: border-color .2s ease-in-out;
+
+    .ui-switch-circle {
+      transition: left .2s ease-in-out;
+      position: absolute;
+      top: .2rem;
+      left: .2rem;
+      display: block;
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: @ui-radius/2;
+      background-color: @ui-switch-bg-color;
+    }
+  }
+
+  &.ui-switch-right {
+    .ui-switch-circle {
+      left: 2.8rem;
+    }
+  }
+
+  .ui-switch-label {
+    font-size: 1.4rem;
+    display: inline-block;
+    position: relative;
+    top: -.7rem;
+    width: 5rem;
+    text-align: left;
+    color: @ui-label-color;
+
+    &:nth-child(1) {
+      text-align: right;
+    }
+  }
+}
+
+.ui-actions {
+  text-align: right;
+  margin-right: 3rem;
+  position: relative;
+
+  button {
+    .ui-btn;
+    position: relative;
+
+    .loading {
+      position: absolute;
+      left: -2rem;
+      top: 1.75rem;
+    }
+  }
+}
+
+.ui-btn {
+  border: none;
+  border-radius: @ui-radius/2 + .1;
+  background: @ui-button-bg-color;
+  color: @ui-button-color;
+  padding: .8rem 4rem;
+  margin-left: 1rem;
+  border-bottom: 2px solid @ui-button-border-color;
+  font-weight: 400;
+  position: relative;
+  letter-spacing: .1rem;
+
+  .sl-icon {
+    color: inherit;
+  }
+
+  .loading {
+    position: absolute;
+    left: -2rem;
+    top: 1.75rem;
+  }
+
+  &:hover {
+    background-color: @ui-button-hover-bg-color;
+  }
+
+  &:active {
+    background-color: @ui-button-active-bg-color;
+    border-bottom-color: @ui-button-active-border-color;
+  }
+
+  &[disabled], &[disabled]:hover, &[disabled]:active, &[disabled].dark-bg {
+    opacity: .6;
+
+    &.primary {
+      background-color: @ui-button-bg-color;
+    }
+
+    &.secondary {
+      color: @ui-secondary-button-color;
+      background-color: @ui-secondary-button-bg-color;
+
+      &:hover {
+        border-bottom-color: @ui-secondary-button-border-color;
+      }
+    }
+  }
+
+  &.secondary {
+    color: @ui-secondary-button-color;
+    background: @ui-secondary-button-bg-color;
+    border-bottom: 2px solid @ui-secondary-button-border-color;
+
+    .sl-icon {
+      color: @ui-secondary-button-color;
+    }
+
+    &:hover {
+      color: @ui-secondary-button-hover-color;
+      background-color: @ui-secondary-button-hover-bg-color;
+      border-bottom-color: @ui-secondary-button-hover-border-color;
+
+      .sl-icon {
+        color: @ui-secondary-button-hover-color;
+      }
+    }
+
+    &:active {
+      color: @ui-secondary-button-active-color;
+      background-color: @ui-secondary-button-active-bg-color;
+      border-bottom-color: @ui-secondary-button-active-border-color;
+
+      .sl-icon {
+        color: @ui-secondary-button-active-color;
+      }
+    }
+  }
+
+  &.accessory {
+    color: @ui-accessory-button-color;
+    background: @ui-accessory-button-bg-color;
+    border-bottom: 2px solid @ui-accessory-button-border-color;
+    padding: 0.5rem 1rem;
+
+    .sl-icon {
+      color: @ui-accessory-button-color;
+    }
+
+    &.small {
+      padding: 0.3rem 0.75rem;
+    }
+
+    &:hover {
+      color: @ui-accessory-button-hover-color;
+      background-color: @ui-accessory-button-hover-bg-color;
+      border-bottom-color: @ui-accessory-button-hover-border-color;
+
+      .sl-icon {
+        color: @ui-accessory-button-hover-color;
+      }
+    }
+
+    &:active {
+      color: @ui-accessory-button-active-color;
+      background-color: @ui-accessory-button-active-bg-color;
+      border-bottom-color: @ui-accessory-button-active-border-color;
+
+      .sl-icon {
+        color: @ui-accessory-button-active-color;
+      }
+    }
+  }
+
+  &.small {
+    font-size: 1.2rem;
+    padding: .75rem 3rem;
+    letter-spacing: .1rem;
+  }
+
+  &.with-spinner {
+    margin-left: 5rem;
+  }
+
+  &.square {
+    padding: .75rem 1.5rem;
+
+
+    .sl-icon {
+      &:before {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &.dark-bg {
+    &.selected, &.selected:hover, &.selected:active {
+      background-color: @ui-button-primary-dark-bg-selected-bg-color;
+      border-bottom-color: @ui-button-primary-dark-bg-selected-border-color;
+    }
+
+    &:hover:not(.selected):not([disabled]) {
+      background-color: @ui-button-primary-dark-bg-hover-bg-color;
+      color: @ui-button-primary-dark-bg-hover-color;
+      border-bottom-color: @ui-button-primary-dark-bg-hover-border-color;
+    }
+
+    &:active:not(.selected):not([disabled]) {
+      background-color: @ui-button-primary-dark-bg-active-bg-color;
+      border-color: @ui-button-primary-dark-bg-active-border-color;
+    }
+
+    &.square {
+      &:active, &:focus {
+        background-color: @ui-button-primary-dark-bg-selected-bg-color;
+        border-bottom-color: @ui-button-primary-dark-bg-selected-border-color;
+      }
+    }
+  }
+}
+
+.ui-sans-btn {
+  .ui-reset-btn;
+}
+
+
+.status-field {
+  padding-top: .2rem;
+  line-height: 3rem;
+
+  button.status-icon {
+    .ui-reset-btn;
+
+    position: relative;
+    top: .2rem;
+
+    .icon {
+      position: relative;
+      top: .2rem;
+      margin-left: 1rem;
+      display: block;
+      background-size: cover;
+
+      &.active {
+        height: 1.45rem;
+        width: 4rem;
+        background: url(/images/connection_on_out_lightbg.svg) no-repeat center center;
+
+        &:hover {
+          background-image: url(/images/connection_on_over_lightbg.svg);
+        }
+
+        &:active {
+          background-image: url(/images/connection_on_down_lightbg.svg);
+        }
+      }
+
+      &.inactive {
+        height: 2rem;
+        width: 3.8rem;
+
+        background: url(/images/connection_off_out_lightbg.svg) no-repeat center center;
+
+        &:hover {
+          background-image: url(/images/connection_off_over_lightbg.svg);
+        }
+
+        &:active {
+          background-image: url(/images/connection_off_down_lightbg.svg);
+        }
+      }
+    }
+  }
+}
+
+.ui-sans-btn {
+  .ui-popover {
+    margin-left: .5rem;
+  }
+
+  &.status {
+    .ui-reset-btn;
+
+    &.problem {
+      .status-txt, .sl-icon {
+        color: @ui-msg-error-color;
+      }
+    }
+
+    &.active {
+      .status-text {
+        color: @ui-action-primary;
+      }
+    }
+  }
+}

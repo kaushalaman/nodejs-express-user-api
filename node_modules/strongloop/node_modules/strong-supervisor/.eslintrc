@@ -1,0 +1,10 @@
+{
+  "extends": "strongloop",
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "comma-dangle": 0
+  }
+}

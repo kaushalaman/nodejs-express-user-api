@@ -1,0 +1,27 @@
+.ui-mixin-placeholder(@color){
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: @color;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: @color;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+}
+
+.ui-reset-btn {
+  background: transparent;
+  color: @grey-1;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}

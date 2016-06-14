@@ -1,0 +1,351 @@
+
+
+.manager-main-layout {
+
+  width:100%;
+  overflow-y: auto;
+  .ui-menu-action {
+    cursor:pointer;
+  }
+
+  .load-balancer-container {
+    float:right;
+    position:relative;
+    background:#ffffff;
+    margin: 0 1.5rem 0 0;
+
+    .load-balancer-content {
+      position: absolute;
+      top: 3rem;
+      right: 1rem;
+      width: 53rem;
+      background: #ffffff;
+      padding: 1rem;
+      z-index: 4000;
+      border:1px solid #dddddd;
+      .ui-popover-box-shadow;
+
+      h4 {
+        margin-top: 0;
+        color: @grey-1;
+      }
+
+      .ui-form {
+        border:0;
+        margin-top: 0;
+
+        input[type=text] {
+          //border:0;
+        }
+      }
+
+      .ui-table {
+
+        thead{
+          th {
+            background-color: #ffffff;
+            border:0;
+          }
+        }
+
+        td {
+          border:0;
+        }
+
+        .load-balancer-host {
+          width:26rem;
+        }
+        .load-balancer-port {
+          width:8rem;
+        }
+
+        .ui-close {
+          margin: .5rem 0 0 1rem;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .app-context {
+    margin: 2rem 20rem 0;
+  }
+
+  form.ui-form  {
+
+    margin-top: 1rem;
+
+    [data-id="PortCol"] {
+      width:11rem;
+      input {
+        width:9rem;
+      }
+
+    }
+    [data-id="PidCountCol"] {
+
+      input {
+        width: 7rem;
+      }
+
+    }
+  }
+  .manager-main-container {
+    width: 105rem;
+    margin: 5rem auto 0 auto;
+
+    .app-context {
+      text-align: center;
+
+    }
+
+    .actions {
+
+      button {
+
+        white-space: nowrap;
+      }
+    }
+
+    .manager-host-actions-container {
+      .dropdown-menu {
+        min-width:17rem;
+
+        .link-cmd {
+          white-space: nowrap;
+          width:100%;
+          margin:0;
+          text-align: left;
+
+          &:hover {
+            background-color:#f2f2f2;
+          }
+          &:active {
+            background-color:@action-primary;
+            color:#ffffff;
+          }
+        }
+      }
+    }
+    .actions {
+
+      button {
+
+        white-space: nowrap;
+      }
+    }
+
+    .service-col {
+      width:20rem;
+      span {
+        display:inline-block;
+        color: #444444;
+        padding-top:1rem;
+      }
+    }
+    .host-col {
+      .manager-host-name-input {
+        width:26rem;
+      }
+    }
+
+    .port-col {
+      width:10rem;
+      input {
+        width:9.5rem;
+      }
+    }
+    .status-col {
+
+      width: 18rem;
+      .status-field {
+        padding-top: .6rem;
+        line-height: inherit;
+      }
+      .is-problem {
+        color: red;
+
+        span {
+          color: red;
+        }
+
+      }
+
+      .host-status-display {
+        width:8rem;
+        display:inline-block;
+
+        .ui-popover {
+          float:right;
+        }
+      }
+      .status-icon {
+        width:6rem;
+      }
+
+
+
+
+
+
+
+
+
+      .manager-host-status-container {
+        position: relative;
+      }
+      .btn-host-activate {
+        width: 2rem;
+
+        :active {
+          color:@brand-info;
+        }
+      }
+      .btn-host-status {
+        width: 7.6rem;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+
+      }
+      .host-problem-tooltip-container {
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+        width: 30rem;
+        border: 1px solid #444444;
+        background: #ffffff;
+        z-index: 4000;
+      }
+      .is-active {
+
+        span {
+          color: #444444;
+        }
+      }
+    }
+
+    .processes-col {
+      width: 10rem;
+    }
+
+    .pid-count-col {
+      width:7rem;
+      input {
+        width:5rem;
+      }
+    }
+    .pid-col, .pids-col {
+      width: 10rem;
+    }
+
+    .action-col {
+      width: 1.5rem;
+      border:0;
+    }
+
+    .manager-pm-host-grid {
+
+      width: 100%;
+      table-layout: fixed;
+
+
+      tr {
+        color: #bbbbbb;
+      }
+
+      th {
+        color: #444444;
+        font-weight: normal;
+      }
+
+      tr.is-active {
+        color: #444;
+      }
+
+      td {
+
+        .ui-menu-action {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+        }
+      }
+
+      .manager-hosts-grid-header {
+        font-weight: normal;
+      }
+
+      .ui-list-scroll {
+        max-height: 8rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0;
+      }
+
+      .host-actions-container {
+        float: right;
+        position: relative;
+
+        .host-actions-list {
+          position: absolute;
+          top: 2rem;
+          width: 15rem;
+
+          button {
+            display:inline-block;
+            text-align: left;
+            width:100%;
+          }
+          button:active {
+            color:@brand-info;
+            background:#dddddd;
+          }
+        }
+      }
+
+      tfoot {
+        .link-cmd {
+          &.disabled {
+            color: @ui-disabled-text-color;
+            cursor: default;
+          }
+        }
+
+        td {
+          padding: 1rem 0;
+        }
+
+        .ui-btn {
+          margin: 0;
+        }
+      }
+    }
+
+  }
+
+  .env-editor-container {
+    h2 {
+      width: 50%;
+      margin: 2rem auto 1rem;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: normal;
+    }
+
+    table {
+      width:98%; /* get rid of intermittent horizontal scroll */
+
+      tbody {
+        td .ui-form-group {
+          padding: 0.5em;
+        }
+
+        td .ui-form-group .ui-input {
+          width: 100%;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}

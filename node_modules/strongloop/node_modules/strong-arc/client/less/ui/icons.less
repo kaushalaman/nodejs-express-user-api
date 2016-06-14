@@ -1,0 +1,177 @@
+//font-icons
+.sl-icon {
+  color: @grey-4;
+}
+
+.error {
+  .sl-icon {
+    color: @red-1;
+  }
+}
+
+//svg icons
+.icon {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center center;
+}
+
+.icon-app-ctrl {
+  background-image: url(/images/appController_out.svg);
+
+  &:hover {
+    background-image: url(/images/appController_over.svg);
+  }
+
+  &:active {
+    background-image: url(/images/appController_down.svg);
+  }
+}
+
+.icon-documentation {
+  background-image: url(/images/documentation_out.svg);
+
+  &:hover {
+    background-image: url(/images/documentation_over.svg);
+  }
+
+  &:active {
+    background-image: url(/images/documentation_down.svg);
+  }
+}
+
+.icon-on-off {
+  background-image: url(/images/onOff_out.svg);
+
+  &:hover {
+    background-image: url(/images/onOff_over.svg);
+  }
+
+  &:active {
+    background-image: url(/images/onOff_down.svg);
+  }
+}
+
+.icon-menu {
+  background-image: url(/images/menu_out.svg);
+
+  &:hover {
+    background-image: url(/images/menu_over.svg);
+  }
+
+  &:active {
+    background-image: url(/images/menu_down.svg);
+  }
+}
+
+//links with icon
+.ui-icon-link {
+  font-size: 1.8rem;
+
+  .sl-icon {
+    color: @grey-4;
+
+  }
+
+  &:hover {
+    .sl-icon {
+      color: @grey-2;
+    }
+  }
+
+  &:active {
+    .sl-icon {
+      color: @blue-1;
+    }
+  }
+}
+
+.error {
+  .ui-icon-link {
+    .sl-icon {
+      color: @red-1;
+
+    }
+
+    &:hover {
+      .sl-icon {
+        color: @red-2;
+      }
+    }
+
+    &:active {
+      .sl-icon {
+        color: @blue-1;
+      }
+    }
+  }
+}
+
+.ui-icon {
+  display: inline-block;
+  width: 30px;
+
+  &.small {
+    height: 1.5rem;
+  }
+
+  &.medium {
+   height: 3rem;
+  }
+
+  &.large {
+    height: 4rem;
+  }
+
+  svg {
+    g path {
+      fill: @grey-5;
+    }
+
+    &.stroke {
+      stroke: @grey-4;
+      stroke-miterlimit: 10;
+    }
+
+    &.circle-x {
+      circle {
+        fill: @grey-5;
+      }
+
+      path {
+        fill: @white;
+      }
+
+      &:hover {
+        circle {
+          fill: @blue-1;
+        }
+      }
+    }
+
+    &.carot {
+      path {
+        fill: @grey-5;
+      }
+    }
+  }
+}
+
+//custom fills and styles for svg icons
+.ui-icon {
+
+  //intercom icon
+  svg.intercom {
+    path {
+      fill: @green-5;
+    }
+
+    &:hover {
+      path {
+        fill: @ui-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "angular-segmentio",
+  "version": "1.0.0",
+  "main": "angular-segmentio.js",
+  "dependencies": {
+    "angular": "~1.2.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.0"
+  },
+  "ignore": [
+    "test/",
+    "config/"
+  ],
+  "homepage": "https://github.com/arnaudbreton/angular-segmentio",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "9a8329734709b6510ac18ebb1fc0e6a2fdbe2cac"
+  },
+  "_source": "git://github.com/arnaudbreton/angular-segmentio.git",
+  "_target": "~1.0.0",
+  "_originalSource": "angular-segmentio"
+}

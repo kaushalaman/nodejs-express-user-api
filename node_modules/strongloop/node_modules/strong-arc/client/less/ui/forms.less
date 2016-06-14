@@ -1,0 +1,573 @@
+.ui-form {
+  color: @ui-form-color;
+  font-size: 1.4rem;
+  padding: 1rem;
+  margin-top: 3rem;
+  border-radius: @ui-radius;
+  border: 1px solid @ui-form-border-color;
+
+  &.no-border {
+    border: none;
+  }
+
+  &.sans-style {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &.has-table {
+    padding: 0;
+    border: none;
+  }
+
+  .ui-form-group {
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+
+    label {
+      margin: 0;
+    }
+
+    &.center {
+      text-align: center;
+
+      select, input {
+        margin: 0.5rem;
+      }
+    }
+
+    &.invalid {
+
+      .msg {
+        color: @ui-msg-error-color;
+        display: block;
+        font-size: 1.2rem;
+
+        &.error {
+          margin: 1rem;
+          color: @ui-msg-error-color;
+        }
+      }
+
+
+      input {
+        border-color: @ui-msg-error-color;
+      }
+    }
+  }
+  .ui-field-group {
+    list-style-type: none;
+    padding-left: 0;
+
+    &.group-inline {
+      position: relative;
+
+      .pull-left + .ui-btn {
+        &.small {
+          position: absolute;
+          top: 2rem;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &.invalid {
+      color: @ui-msg-error-color;
+
+      .msg {
+        display: block;
+        font-size: 1.2rem;
+
+        &.error {
+          margin: 1rem;
+          color: @ui-msg-error-color;
+        }
+      }
+
+
+      input {
+        border-color: @ui-msg-error-color;
+      }
+    }
+  }
+
+  fieldset {
+    position: relative;
+
+    legend {
+      color: @ui-form-color;
+      font-weight: 300;
+      position: absolute;
+      top: -4.2rem;
+      left: 0;
+      border: none;
+    }
+
+    .ui-group-label {
+      color: @ui-form-color;
+      font-weight: 300;
+      font-size: 1.7rem;
+    }
+  }
+
+  label {
+    color: @ui-form-color;
+    display: block;
+
+    &.inline {
+      display: inline-block;
+      margin-right: 0;
+    }
+
+    .ui-label-txt {
+      padding-left: .5rem;
+    }
+  }
+
+  input[type=text], input[type=number], input[type=password], textarea {
+    border: 1px solid @ui-form-field-border-color;
+    width: 35rem;
+    padding: .5rem 1rem;
+    border-radius: @ui-radius;
+
+    &[type=number] {
+      padding-right: 0;
+    }
+
+    &[type=text], &[type=password], &textarea {
+      .ui-mixin-placeholder(@grey-4);
+    }
+
+    &[disabled] {
+      color: @ui-disabled-button-color;
+      background: @ui-disabled-input-bg-color;
+    }
+  }
+
+}
+
+.ui-arrow-next {
+  width: 70%;
+  height: 1rem;
+  margin: 7rem auto 1rem;
+  background: @ui-arrow-next-color;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: -1rem;
+    top: 0;
+    margin-top: -.5rem;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1rem solid @ui-arrow-next-color;
+  }
+}
+
+ol, ul {
+  &.group-inline {
+    list-style-type: none;
+    padding-left: 2rem;
+
+    > li {
+      display: inline-block;
+    }
+  }
+}
+
+/* Hide spinners on number inputs that shouldn't have spinners */
+.no-spinner {
+  -moz-appearance:textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+/* override for bootstraps default */
+.popover {
+  max-width: 100%;
+  border-radius: 0;
+}
+
+.ui-dialog-form {
+  &.small {
+    width: 25rem;
+  }
+
+  &.medium {
+    width: 50rem;
+  }
+
+  &.large {
+    width: 75rem;
+  }
+
+  .dialog-body {
+    display: table;
+    width: 100%;
+    border-spacing: 0.5rem;
+
+    .dialog-input {
+      display: table-row;
+
+      .ui-label {
+        display: table-cell;
+        color: inherit;
+        width: 100%;
+      }
+
+      .ui-input {
+        display: table-cell;
+        border: 1px solid @ui-form-field-border-color;
+        width: 16rem;
+        padding: .5rem 1rem;
+        border-radius: @ui-radius;
+
+        &[type=number] {
+          padding-right: 0;
+        }
+
+        &[type=text], &[type=password], &textarea {
+          .ui-mixin-placeholder(@grey-4);
+        }
+
+        &[disabled] {
+          color: @ui-disabled-button-color;
+          background: @ui-disabled-input-bg-color;
+        }
+      }
+
+      .ui-units {
+        display: table-cell;
+        color: @grey-4;
+        font-size: small;
+        padding-left: 0.1rem;
+      }
+    }
+  }
+
+  .dialog-footer {
+    display: table;
+    width: 100%;
+
+    .dialog-footer-group {
+      display: table-row;
+    }
+
+    .dialog-summary {
+      display: table-cell;
+      vertical-align: top;
+      font-size: 10pt;
+      color: @grey-2;
+    }
+
+    .dialog-buttons {
+      display: table-cell;
+      vertical-align: bottom;
+    }
+  }
+}
+
+//form inputs v2
+.ui-form {
+  label {
+    margin-bottom: 0;
+  }
+
+  .ui-input, .ui-number, .ui-textarea {
+    color: @ui-input-color;
+    background-color: @ui-input-bg-color;
+    padding: .4rem .5rem;
+    font-size: 1.6rem;
+    font-weight: 200;
+    transition: border-color .2s ease-in-out;
+    outline: none;
+
+    .box-shadow(inset 0px 1px 0px 0px @ui-input-inner-shadow-color);
+
+    &.skinny {
+      width: 8rem;
+    }
+
+
+    .ui-mixin-placeholder(@ui-input-placeholder-color);
+
+    &:focus, &.ng-focused {
+      color: @ui-input-color;
+      border-color: @ui-input-focus-border-color;
+    }
+  }
+
+
+  .ui-textarea {
+    resize: none;
+  }
+
+  .search {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+
+    .icon {
+      position: absolute;
+      top: 0;
+      left: .2rem;
+      display: block;
+      width: 2.8rem;
+      height: 2.8rem;
+      line-height: 2.8rem;
+      text-align: center;
+      font-size: 1.4rem;
+
+      i {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .icon-search {
+        background: url(/images/magnifier_out.svg) no-repeat center center;
+        background-size: 75% 75%;
+      }
+
+      &.focused {
+        .icon-search {
+          background-image: url(/images/magnifier_over.svg);
+        }
+      }
+    }
+
+    .ui-input, .ui-number, .ui-textarea {
+      .box-shadow(none);
+      border-radius: @ui-input-search-radius;
+      padding: .5rem 3rem;
+
+    }
+
+    .clear {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: .1rem;
+      left: auto;
+      text-decoration: none;
+      cursor: default;
+
+      .icon-close {
+        display: none;
+      }
+
+      &.focused {
+        cursor: pointer;
+
+        .icon-close {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url(/images/x_out.svg) no-repeat center center;
+          background-size: 75% 75%;
+        }
+
+        &:hover {
+          .icon-close {
+            background-image: url(/images/x_over.svg);
+          }
+        }
+
+        &:active {
+          .icon-close {
+            background-image: url(/images/x_down.svg);
+          }
+        }
+      }
+    }
+  }
+
+  .invalid {
+    .ui-input, .ui-number, .ui-textarea {
+      border-color: @ui-input-error-border-color;
+    }
+  }
+}
+
+//checkboxes
+.ui-form .ui-checkbox, .ui-checkbox {
+  .clearfix;
+  display: inline-block;
+  line-height: 2rem;
+
+  .ui-label-txt {
+    float: left;
+    margin-left: .5rem;
+    font-size: 1.4rem;
+  }
+
+  input {
+    display: none;
+
+    & + .icon {
+      float: left;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background: url(/images/checkbox_off.svg) no-repeat center center;
+    }
+
+    &.checked, &[checked] {
+      & + .icon {
+        background-image: url(/images/checkbox_on_out.svg);
+      }
+    }
+
+    &[disabled] {
+      & + .icon {
+        opacity: .5;
+      }
+    }
+  }
+
+  &:hover {
+    input {
+      & + .icon {
+        background-image: url(/images/checkbox_off_over.svg);
+      }
+
+      &.checked, &[checked] {
+        & + .icon {
+          background-image: url(/images/checkbox_on_over.svg);
+        }
+      }
+
+      &[disabled] {
+        & + .icon {
+          background-image: url(/images/checkbox_on_down.svg);
+        }
+      }
+
+      &.checked[disabled], &[checked][disabled] {
+        & + .icon {
+          background-image: url(/images/checkbox_on_out.svg);
+        }
+      }
+    }
+  }
+
+  &:hover:active {
+    input {
+      & + .icon {
+        background-image: url(/images/checkbox_on_out.svg);
+      }
+
+      &[disabled] {
+        & + .icon {
+          background-image: url(/images/checkbox_on_down.svg);
+        }
+      }
+
+      &.checked, &[checked] {
+        & + .icon {
+          background-image: url(/images/checkbox_off.svg);
+        }
+      }
+
+      &.checked[disabled], &[checked][disabled] {
+        & + .icon {
+          background-image: url(/images/checkbox_on_out.svg);
+        }
+      }
+    }
+  }
+}
+
+//radio buttons
+.ui-form .ui-radio, .ui-radio {
+  .clearfix;
+  display: inline-block;
+  line-height: 2rem;
+
+  .ui-label-txt {
+    float: left;
+    margin-left: .5rem;
+    font-size: 1.4rem;
+  }
+
+  input {
+    display: none;
+
+    & + .icon {
+      float: left;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background: url(/images/radio_off.svg) no-repeat center center;
+    }
+
+    &.checked, &[checked] {
+      & + .icon {
+        background-image: url(/images/radio_on_out.svg);
+      }
+    }
+
+    &[disabled] {
+      & + .icon {
+        opacity: .5;
+      }
+    }
+  }
+
+  &:hover {
+    input {
+      & + .icon {
+        background-image: url(/images/radio_off_over.svg);
+      }
+
+      &.checked, &[checked] {
+        & + .icon {
+          background-image: url(/images/radio_on_over.svg);
+        }
+      }
+
+      &[disabled] {
+        & + .icon {
+          background-image: url(/images/radio_off.svg);
+        }
+      }
+
+      &.checked[disabled], &[checked][disabled] {
+        & + .icon {
+          background-image: url(/images/radio_on_out.svg);
+        }
+      }
+    }
+  }
+
+  &:hover:active {
+    input {
+      & + .icon {
+        background-image: url(/images/radio_on_out.svg);
+      }
+
+      &[disabled] {
+        & + .icon {
+          background-image: url(/images/radio_on_down.svg);
+        }
+      }
+
+      &.checked, &[checked] {
+        & + .icon {
+          background-image: url(/images/radio_on_out.svg);
+        }
+      }
+
+      &.checked[disabled], &[checked][disabled] {
+        & + .icon {
+          background-image: url(/images/radio_on_out.svg);
+        }
+      }
+    }
+  }
+}
