@@ -35,6 +35,14 @@ app.all('/*', function(req, res, next) {
   response.render('index');
 });
 */
+//Load website
+app.use(express.static('client'));
+app.get('/home',(req,res)=>{
+    console.log(__dirname);
+    res.sendFile(__dirname+'/client/index.html');
+});
+
+// use apis
 app.use('/', routes);
 app.use('/:id',routes);
 app.use('/users', users);
