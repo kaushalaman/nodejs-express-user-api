@@ -8,10 +8,11 @@ var config = require('./config');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var mongoose = require('mongoose');
+//var memwatch = require('memwatch');
 //var swagger = require('swagger-express');
 
 var app = express();
-
+//memwatch.on('leak', function(info) { ... });
 // view engine setup
 app.set('port', process.env.PORT || config.serverConfig.PORT);  
 app.set('views', path.join(__dirname, 'views'));
@@ -37,7 +38,7 @@ app.all('/*', function(req, res, next) {
 */
 //Load website
 app.use(express.static('client'));
-app.get('/home',(req,res)=>{
+app.get('/home',function(req,res){
     console.log(__dirname);
     res.sendFile(__dirname+'/client/index.html');
 });

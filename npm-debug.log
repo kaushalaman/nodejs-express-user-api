@@ -1,0 +1,233 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'memwatch' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.5
+4 verbose install initial load of /home/ayush/Desktop/express-user-api/package.json
+5 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/async/package.json
+6 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/bcrypt/package.json
+7 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/body-parser/package.json
+8 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/cookie-parser/package.json
+9 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/debug/package.json
+10 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/express/package.json
+11 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/express-joi/package.json
+12 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/jade/package.json
+13 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/moment-timezone/package.json
+14 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/mongoose/package.json
+15 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/morgan/package.json
+16 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/node-tick-processor/package.json
+17 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/pm2/package.json
+18 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/serve-favicon/package.json
+19 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/strongloop/package.json
+20 verbose installManyTop reading scoped package data from /home/ayush/Desktop/express-user-api/node_modules/swagger-express/package.json
+21 info package.json swagger-express@1.0.5 No license field.
+22 info package.json node-tick-processor@0.0.2 license should be a valid SPDX license expression
+23 verbose readDependencies loading dependencies from /home/ayush/Desktop/express-user-api/package.json
+24 silly cache add args [ 'memwatch', null ]
+25 verbose cache add spec memwatch
+26 silly cache add parsed spec Result {
+26 silly cache add   raw: 'memwatch',
+26 silly cache add   scope: null,
+26 silly cache add   name: 'memwatch',
+26 silly cache add   rawSpec: '',
+26 silly cache add   spec: 'latest',
+26 silly cache add   type: 'tag' }
+27 silly addNamed memwatch@latest
+28 verbose addNamed "latest" is being treated as a dist-tag for memwatch
+29 info addNameTag [ 'memwatch', 'latest' ]
+30 silly mapToRegistry name memwatch
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry data Result {
+33 silly mapToRegistry   raw: 'memwatch',
+33 silly mapToRegistry   scope: null,
+33 silly mapToRegistry   name: 'memwatch',
+33 silly mapToRegistry   rawSpec: '',
+33 silly mapToRegistry   spec: 'latest',
+33 silly mapToRegistry   type: 'tag' }
+34 silly mapToRegistry uri https://registry.npmjs.org/memwatch
+35 verbose addNameTag registry:https://registry.npmjs.org/memwatch not in flight; fetching
+36 verbose request uri https://registry.npmjs.org/memwatch
+37 verbose request no auth needed
+38 info attempt registry request try #1 at 3:46:27 PM
+39 verbose request id 2a6b7acc149ebc43
+40 verbose etag "65RFYCBEO3AYP4QIA50GL8TVR"
+41 http request GET https://registry.npmjs.org/memwatch
+42 http 304 https://registry.npmjs.org/memwatch
+43 verbose headers { date: 'Wed, 15 Jun 2016 10:16:26 GMT',
+43 verbose headers   via: '1.1 varnish',
+43 verbose headers   'cache-control': 'max-age=300',
+43 verbose headers   etag: '"65RFYCBEO3AYP4QIA50GL8TVR"',
+43 verbose headers   age: '24',
+43 verbose headers   connection: 'keep-alive',
+43 verbose headers   'x-served-by': 'cache-sin6920-SIN',
+43 verbose headers   'x-cache': 'HIT',
+43 verbose headers   'x-cache-hits': '1',
+43 verbose headers   'x-timer': 'S1465985786.124891,VS0,VE0',
+43 verbose headers   vary: 'Accept-Encoding' }
+44 silly get cb [ 304,
+44 silly get   { date: 'Wed, 15 Jun 2016 10:16:26 GMT',
+44 silly get     via: '1.1 varnish',
+44 silly get     'cache-control': 'max-age=300',
+44 silly get     etag: '"65RFYCBEO3AYP4QIA50GL8TVR"',
+44 silly get     age: '24',
+44 silly get     connection: 'keep-alive',
+44 silly get     'x-served-by': 'cache-sin6920-SIN',
+44 silly get     'x-cache': 'HIT',
+44 silly get     'x-cache-hits': '1',
+44 silly get     'x-timer': 'S1465985786.124891,VS0,VE0',
+44 silly get     vary: 'Accept-Encoding' } ]
+45 verbose etag https://registry.npmjs.org/memwatch from cache
+46 verbose get saving memwatch to /home/ayush/.npm/registry.npmjs.org/memwatch/.cache.json
+47 verbose correctMkdir /home/ayush/.npm correctMkdir not in flight; initializing
+48 silly addNameTag next cb for memwatch with tag latest
+49 silly addNamed memwatch@0.2.2
+50 verbose addNamed "0.2.2" is a plain semver version for memwatch
+51 silly cache afterAdd memwatch@0.2.2
+52 verbose afterAdd /home/ayush/.npm/memwatch/0.2.2/package/package.json not in flight; writing
+53 verbose correctMkdir /home/ayush/.npm correctMkdir not in flight; initializing
+54 verbose afterAdd /home/ayush/.npm/memwatch/0.2.2/package/package.json written
+55 silly install resolved [ { name: 'memwatch',
+55 silly install resolved     description: 'Keep an eye on your memory usage, and discover and isolate leaks.',
+55 silly install resolved     version: '0.2.2',
+55 silly install resolved     author: { name: 'Lloyd Hilaiel', url: 'http://lloyd.io' },
+55 silly install resolved     engines: { node: '>= 0.6.0' },
+55 silly install resolved     repository:
+55 silly install resolved      { type: 'git',
+55 silly install resolved        url: 'git+https://github.com/lloyd/node-memwatch.git' },
+55 silly install resolved     main: 'include.js',
+55 silly install resolved     licenses: [ [Object] ],
+55 silly install resolved     bugs: { url: 'https://github.com/lloyd/node-memwatch/issues' },
+55 silly install resolved     scripts: { install: 'node-gyp rebuild', test: 'mocha tests' },
+55 silly install resolved     devDependencies: { mocha: '1.2.2', should: '0.6.3', 'node-gyp': '0.5.7' },
+55 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+55 silly install resolved     readme: '`node-memwatch`: Leak Detection and Heap Diffing for Node.JS\n============================================================\n\n[![Build Status](https://secure.travis-ci.org/lloyd/node-memwatch.png)](http://travis-ci.org/lloyd/node-memwatch)\n\n`node-memwatch` is here to help you detect and find memory leaks in\nNode.JS code.  It provides:\n\n- A `leak` event, emitted when it appears your code is leaking memory.\n\n- A `stats` event, emitted occasionally, giving you\n  data describing your heap usage and trends over time.\n\n- A `HeapDiff` class that lets you compare the state of your heap between\n  two points in time, telling you what has been allocated, and what\n  has been released.\n\n\nInstallation\n------------\n\n- `npm install memwatch`\n\nor\n\n- `git clone git://github.com/lloyd/node-memwatch.git`\n\n\nDescription\n-----------\n\nThere are a growing number of tools for debugging and profiling memory\nusage in Node.JS applications, but there is still a need for a\nplatform-independent native module that requires no special\ninstrumentation.  This module attempts to satisfy that need.\n\nTo get started, import `node-memwatch` like so:\n\n```javascript\nvar memwatch = require(\'memwatch\');\n```\n\n### Leak Detection\n\nYou can then subscribe to `leak` events.  A `leak` event will be\nemitted when your heap usage has increased for five consecutive\ngarbage collections:\n\n```javascript\nmemwatch.on(\'leak\', function(info) { ... });\n```\n\nThe `info` object will look something like:\n\n```javascript\n{ start: Fri, 29 Jun 2012 14:12:13 GMT,\n  end: Fri, 29 Jun 2012 14:12:33 GMT,\n  growth: 67984,\n  reason: \'heap growth over 5 consecutive GCs (20s) - 11.67 mb/hr\' }\n```\n\n\n### Heap Usage\n\nThe best way to evaluate your memory footprint is to look at heap\nusage right aver V8 performs garbage collection.  `memwatch` does\nexactly this - it checks heap usage only after GC to give you a stable\nbaseline of your actual memory usage.\n\nWhen V8 performs a garbage collection (technically, we\'re talking\nabout a full GC with heap compaction), `memwatch` will emit a `stats`\nevent.\n\n```javascript\nmemwatch.on(\'stats\', function(stats) { ... });\n```\n\nThe `stats` data will look something like this:\n\n```javascript\n{\n  "num_full_gc": 17,\n  "num_inc_gc": 8,\n  "heap_compactions": 8,\n  "estimated_base": 2592568,\n  "current_base": 2592568,\n  "min": 2499912,\n  "max": 2592568,\n  "usage_trend": 0\n}\n```\n\n`estimated_base` and `usage_trend` are tracked over time.  If usage\ntrend is consistently positive, it indicates that your base heap size\nis continuously growing and you might have a leak.\n\nV8 has its own idea of when it\'s best to perform a GC, and under a\nheavy load, it may defer this action for some time.  To aid in\nspeedier debugging, `memwatch` provides a `gc()` method to force V8 to\ndo a full GC and heap compaction.\n\n\n### Heap Diffing\n\nSo far we have seen how `memwatch` can aid in leak detection.  For\nleak isolation, it provides a `HeapDiff` class that takes two snapshots\nand computes a diff between them.  For example:\n\n```javascript\n// Take first snapshot\nvar hd = new memwatch.HeapDiff();\n\n// do some things ...\n\n// Take the second snapshot and compute the diff\nvar diff = hd.end();\n```\n\nThe contents of `diff` will look something like:\n\n```javascript\n{\n  "before": { "nodes": 11625, "size_bytes": 1869904, "size": "1.78 mb" },\n  "after":  { "nodes": 21435, "size_bytes": 2119136, "size": "2.02 mb" },\n  "change": { "size_bytes": 249232, "size": "243.39 kb", "freed_nodes": 197,\n    "allocated_nodes": 10007,\n    "details": [\n      { "what": "String",\n        "size_bytes": -2120,  "size": "-2.07 kb",  "+": 3,    "-": 62\n      },\n      { "what": "Array",\n        "size_bytes": 66687,  "size": "65.13 kb",  "+": 4,    "-": 78\n      },\n      { "what": "LeakingClass",\n        "size_bytes": 239952, "size": "234.33 kb", "+": 9998, "-": 0\n      }\n    ]\n  }\n```\n\nThe diff shows that during the sample period, the total number of\nallocated `String` and `Array` classes decreased, but `Leaking Class`\ngrew by 9998 allocations.  Hmmm.\n\nYou can use `HeapDiff` in your `on(\'stats\')` callback; even though it\ntakes a memory snapshot, which triggers a V8 GC, it will not trigger\nthe `stats` event itself.  Because that would be silly.\n\n\nFuture Work\n-----------\n\nPlease see the Issues to share suggestions and contribute!\n\n\nLicense\n-------\n\nhttp://wtfpl.org\n',
+55 silly install resolved     readmeFilename: 'README.md',
+55 silly install resolved     _id: 'memwatch@0.2.2',
+55 silly install resolved     dist:
+55 silly install resolved      { shasum: '779e8cd982532b6221b6ed1c1269098bee16f92c',
+55 silly install resolved        tarball: 'https://registry.npmjs.org/memwatch/-/memwatch-0.2.2.tgz' },
+55 silly install resolved     _from: 'memwatch@latest',
+55 silly install resolved     _npmVersion: '1.2.14',
+55 silly install resolved     _npmUser: { name: 'lloyd', email: 'lloyd@hilaiel.com' },
+55 silly install resolved     maintainers: [ [Object] ],
+55 silly install resolved     directories: {},
+55 silly install resolved     _shasum: '779e8cd982532b6221b6ed1c1269098bee16f92c',
+55 silly install resolved     _resolved: 'https://registry.npmjs.org/memwatch/-/memwatch-0.2.2.tgz',
+55 silly install resolved     gypfile: true,
+55 silly install resolved     homepage: 'https://github.com/lloyd/node-memwatch#readme' } ]
+56 info install memwatch@0.2.2 into /home/ayush/Desktop/express-user-api
+57 info installOne memwatch@0.2.2
+58 verbose installOne of memwatch to /home/ayush/Desktop/express-user-api not in flight; installing
+59 verbose correctMkdir /home/ayush/.npm/_locks correctMkdir not in flight; initializing
+60 verbose lock using /home/ayush/.npm/_locks/memwatch-0acf043c8735700d.lock for /home/ayush/Desktop/express-user-api/node_modules/memwatch
+61 silly install write writing memwatch 0.2.2 to /home/ayush/Desktop/express-user-api/node_modules/memwatch
+62 verbose unbuild node_modules/memwatch
+63 silly gentlyRm /home/ayush/Desktop/express-user-api/node_modules/memwatch is being purged from base /home/ayush/Desktop/express-user-api
+64 verbose gentlyRm don't care about contents; nuking /home/ayush/Desktop/express-user-api/node_modules/memwatch
+65 verbose tar unpack /home/ayush/.npm/memwatch/0.2.2/package.tgz
+66 verbose tar unpacking to /home/ayush/Desktop/express-user-api/node_modules/memwatch
+67 silly gentlyRm /home/ayush/Desktop/express-user-api/node_modules/memwatch is being purged
+68 verbose gentlyRm don't care about contents; nuking /home/ayush/Desktop/express-user-api/node_modules/memwatch
+69 silly gunzTarPerm modes [ '775', '664' ]
+70 silly gunzTarPerm extractEntry package.json
+71 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+72 silly gunzTarPerm extractEntry .npmignore
+73 silly gunzTarPerm modified mode [ '.npmignore', 420, 436 ]
+74 silly gunzTarPerm extractEntry README.md
+75 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+76 silly gunzTarPerm extractEntry tests.js
+77 silly gunzTarPerm modified mode [ 'tests.js', 420, 436 ]
+78 silly gunzTarPerm extractEntry foo.js
+79 silly gunzTarPerm modified mode [ 'foo.js', 420, 436 ]
+80 silly gunzTarPerm extractEntry include.js
+81 silly gunzTarPerm modified mode [ 'include.js', 420, 436 ]
+82 silly gunzTarPerm extractEntry .travis.yml
+83 silly gunzTarPerm modified mode [ '.travis.yml', 420, 436 ]
+84 silly gunzTarPerm extractEntry ChangeLog
+85 silly gunzTarPerm modified mode [ 'ChangeLog', 420, 436 ]
+86 silly gunzTarPerm extractEntry #wscript#
+87 silly gunzTarPerm modified mode [ '#wscript#', 420, 436 ]
+88 silly gunzTarPerm extractEntry binding.gyp
+89 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 436 ]
+90 silly gunzTarPerm extractEntry src/heapdiff.cc
+91 silly gunzTarPerm modified mode [ 'src/heapdiff.cc', 420, 436 ]
+92 silly gunzTarPerm extractEntry src/heapdiff.hh
+93 silly gunzTarPerm modified mode [ 'src/heapdiff.hh', 420, 436 ]
+94 silly gunzTarPerm extractEntry src/init.cc
+95 silly gunzTarPerm modified mode [ 'src/init.cc', 420, 436 ]
+96 silly gunzTarPerm extractEntry src/memwatch.cc
+97 silly gunzTarPerm modified mode [ 'src/memwatch.cc', 420, 436 ]
+98 silly gunzTarPerm extractEntry src/memwatch.hh
+99 silly gunzTarPerm modified mode [ 'src/memwatch.hh', 420, 436 ]
+100 silly gunzTarPerm extractEntry src/platformcompat.hh
+101 silly gunzTarPerm modified mode [ 'src/platformcompat.hh', 420, 436 ]
+102 silly gunzTarPerm extractEntry src/util.cc
+103 silly gunzTarPerm modified mode [ 'src/util.cc', 420, 436 ]
+104 silly gunzTarPerm extractEntry src/util.hh
+105 silly gunzTarPerm modified mode [ 'src/util.hh', 420, 436 ]
+106 silly gunzTarPerm extractEntry examples/basic_heapdiff.js
+107 silly gunzTarPerm modified mode [ 'examples/basic_heapdiff.js', 420, 436 ]
+108 silly gunzTarPerm extractEntry examples/do_nothing_server.js
+109 silly gunzTarPerm modified mode [ 'examples/do_nothing_server.js', 420, 436 ]
+110 silly gunzTarPerm extractEntry examples/slightly_leaky.js
+111 silly gunzTarPerm modified mode [ 'examples/slightly_leaky.js', 420, 436 ]
+112 verbose write writing to /home/ayush/Desktop/express-user-api/node_modules/memwatch/package.json
+113 info preinstall memwatch@0.2.2
+114 verbose readDependencies loading dependencies from /home/ayush/Desktop/express-user-api/node_modules/memwatch/package.json
+115 verbose readDependencies loading dependencies from /home/ayush/Desktop/express-user-api/node_modules/memwatch/package.json
+116 silly install resolved []
+117 verbose about to build /home/ayush/Desktop/express-user-api/node_modules/memwatch
+118 info build /home/ayush/Desktop/express-user-api/node_modules/memwatch
+119 info linkStuff memwatch@0.2.2
+120 silly linkStuff memwatch@0.2.2 has /home/ayush/Desktop/express-user-api/node_modules as its parent node_modules
+121 verbose linkBins memwatch@0.2.2
+122 verbose linkMans memwatch@0.2.2
+123 verbose rebuildBundles memwatch@0.2.2
+124 info install memwatch@0.2.2
+125 verbose unsafe-perm in lifecycle true
+126 info memwatch@0.2.2 Failed to exec install script
+127 verbose unlock done using /home/ayush/.npm/_locks/memwatch-0acf043c8735700d.lock for /home/ayush/Desktop/express-user-api/node_modules/memwatch
+128 verbose stack Error: memwatch@0.2.2 install: `node-gyp rebuild`
+128 verbose stack Exit status 1
+128 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:217:16)
+128 verbose stack     at emitTwo (events.js:87:13)
+128 verbose stack     at EventEmitter.emit (events.js:172:7)
+128 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+128 verbose stack     at emitTwo (events.js:87:13)
+128 verbose stack     at ChildProcess.emit (events.js:172:7)
+128 verbose stack     at maybeClose (internal/child_process.js:827:16)
+128 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+129 verbose pkgid memwatch@0.2.2
+130 verbose cwd /home/ayush/Desktop/express-user-api
+131 error Linux 3.16.0-30-generic
+132 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "--save" "memwatch"
+133 error node v4.4.5
+134 error npm  v2.15.5
+135 error code ELIFECYCLE
+136 error memwatch@0.2.2 install: `node-gyp rebuild`
+136 error Exit status 1
+137 error Failed at the memwatch@0.2.2 install script 'node-gyp rebuild'.
+137 error This is most likely a problem with the memwatch package,
+137 error not with npm itself.
+137 error Tell the author that this fails on your system:
+137 error     node-gyp rebuild
+137 error You can get information on how to open an issue for this project with:
+137 error     npm bugs memwatch
+137 error Or if that isn't available, you can get their info via:
+137 error
+137 error     npm owner ls memwatch
+137 error There is likely additional logging output above.
+138 verbose exit [ 1, true ]
+139 verbose unbuild node_modules/memwatch
+140 info preuninstall memwatch@0.2.2
+141 info uninstall memwatch@0.2.2
+142 verbose unbuild rmStuff memwatch@0.2.2 from /home/ayush/Desktop/express-user-api/node_modules
+143 info postuninstall memwatch@0.2.2
+144 silly gentlyRm /home/ayush/Desktop/express-user-api/node_modules/memwatch is being purged from base /home/ayush/Desktop/express-user-api
+145 verbose gentlyRm don't care about contents; nuking /home/ayush/Desktop/express-user-api/node_modules/memwatch
+146 silly vacuum-fs purging /home/ayush/Desktop/express-user-api/node_modules/memwatch
+147 silly vacuum-fs quitting because other entries in /home/ayush/Desktop/express-user-api/node_modules
