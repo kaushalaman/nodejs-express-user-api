@@ -28,7 +28,7 @@ var UserSchema = new Schema(
     },
     description:{type: String,default:null},
     loggedInCount:{type:Number,default:0},
-    profile_image_url : {type:String},
+    profile_image_url : {type:String,default:null},
     url: {type: String},
     friends_count: {type:Number,default:0},
     status_count : {type: Number,default:0},

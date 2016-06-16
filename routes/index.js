@@ -196,33 +196,34 @@ console.log(__dirname);
 var TARGET_PATH = path.resolve(__dirname, '../writable/');  
 var IMAGE_TYPES = ['image/jpeg', 'image/png'];  
 router.post('/image/upload', multipartMiddleware, function(req, res){  
-    console.log(req.body, req.files);
+
+    //console.log(req.body, req.files);
     var is;
     var os;
     var targetPath;
     var targetName;
     var tempPath = req.files.file.path;
-    console.log(tempPath);
+    //console.log(tempPath);
     //get the mime type of the file
     var type = mime.lookup(req.files.file.path);
-    console.log("type "+type);
+    //console.log("type "+type);
     //get the extension of the file
     var extension = req.files.file.path.split(/[. ]+/).pop();
-    console.log("extension "+extension);
+    //console.log("extension "+extension);
     //console.log("try "+TARGET_PATH);
-    console.log("image types "+IMAGE_TYPES);
-    console.log(IMAGE_TYPES.indexOf(type));
+    //console.log("image types "+IMAGE_TYPES);
+    //console.log(IMAGE_TYPES.indexOf(type));
     //check to see if we support the file type
     if (IMAGE_TYPES.indexOf(type) == -1) {
       return res.send(415, 'Supported image formats: jpeg, jpg, jpe, png.');
     }
-    console.log("yes");
+    //console.log("yes");
     //create a new name for the image
     targetName = uid(22) + '.' + extension;
-    console.log("target name ",targetName);
+    //console.log("target name ",targetName);
     //determine the new path to save the image
     targetPath = path.join(TARGET_PATH, targetName);
-    console.log("target path ",targetPath);
+    //console.log("target path ",targetPath);
     //create a read stream in order to read the file
     is = fs.createReadStream(tempPath);
 
@@ -237,7 +238,20 @@ router.post('/image/upload', multipartMiddleware, function(req, res){
         return res.send(500, 'Something went wrong');
       }
     });
-
+    User.update({$or: [{email:req.body.id},{username:req.body.id}]},{'$set':{profile_image_url:targetPath}},function(err){
+        if(err){
+            throw err;
+            process.exit(1);
+        }
+        User.find({$or: [{email:req.body.id},{username:req.body.id}]},function(err,data){
+            if(err){
+                throw err;
+            }
+            var p =data[0].profile_image_url
+            res.send({'Image Uploaded ':p});
+        });
+        
+    });
     //if we are done moving the file
     is.on('end', function() {
 
@@ -247,14 +261,7 @@ router.post('/image/upload', multipartMiddleware, function(req, res){
           return res.send(500, 'Something went wrong');
         }
 
-        //send something nice to user
-        /*
-        res.render('image', {
-          name: targetName,
-          type: type,
-          extension: extension
-        });
-    */
+     
       });//#end - unlink
     });//#end - on.end
   });
