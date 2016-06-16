@@ -9,7 +9,7 @@ var constants = require('../config/constants.js');
 var UserSchema = new Schema(
 {
 	names: {type: String, required:true},
-	email: {type: String, unique:true,required:true},
+	email: {type: String, unique:true,required:true,match:/.+@.+\..+/,lowercase:true},
 	username : {type: String, unique: true, required: true},
 	password : {type: String, required:true},
 	contact: {type: String},
@@ -27,6 +27,7 @@ var UserSchema = new Schema(
         	 coordinates: {type: [Number], default: [0, 0]}
     },
     description:{type: String,default:null},
+    loggedInCount:{type:Number,default:0},
     profile_image_url : {type:String},
     url: {type: String},
     friends_count: {type:Number,default:0},

@@ -1,5 +1,5 @@
 'use strict';
-
+const path = require('path');  
 const STATUS_CODE = {
 	OK: 200,
     CREATED: 201,
@@ -12,13 +12,15 @@ const STATUS_CODE = {
     ALREADY_EXISTS_CONFLICT: 409,
     UNSUPPORTED_MEDIA_TYPE: 415,
     SERVER_ERROR: 500
-}
+};
 
 const GEO_JSON_TYPES = {
     "Point": "Point"
 };
 
+
 module.exports = {
 	STATUS_CODE: STATUS_CODE,
-	GEO_JSON_TYPES: GEO_JSON_TYPES
+	GEO_JSON_TYPES: GEO_JSON_TYPES,
+    
 };
